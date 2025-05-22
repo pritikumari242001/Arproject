@@ -1,10 +1,12 @@
 
 import React from "react";
-import { QRCodeSVG } from "qrcode.react"; // Correct named export
+import { QRCodeSVG } from "qrcode.react";
 
 const QRCodeDisplay = () => {
 //   const url = "http://localhost:5173/ar";
-  const url = "https://arproject-eight.vercel.app/ar";
+  // const url = "https://arproject-eight.vercel.app/ar";
+   const url = "https://arproject-eight.vercel.app/pattern-marker.patt";
+
 
   return (
   
