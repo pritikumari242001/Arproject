@@ -205,7 +205,8 @@ const ARVideoPlayer = () => {
         <a-assets>
           <video
             id="video"
-            src="https://res.cloudinary.com/dbnlmaim7/video/upload/v1747897612/5955965-uhd_3840_2160_30fps_hxa08u.mp4"
+            // src="https://res.cloudinary.com/dbnlmaim7/video/upload/v1747897612/5955965-uhd_3840_2160_30fps_hxa08u.mp4"
+            src="https://res.cloudinary.com/dsouwco6y/video/upload/v1747916451/103224-662114480_tiny_i37zoh.mp4"
             preload="auto"
             crossOrigin="anonymous"
             loop
