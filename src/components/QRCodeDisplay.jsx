@@ -4,7 +4,7 @@ import { QRCodeSVG } from "qrcode.react"; // Correct named export
 
 const QRCodeDisplay = () => {
 //   const url = "http://localhost:5173/ar";
-  const url = "https://arproject-fegfncnej-priti-kumaris-projects-df8929d7.vercel.app/ar";
+  const url = "https://arproject-eight.vercel.app/ar";
 
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
