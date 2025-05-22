@@ -129,107 +129,107 @@
 // };
 
 // export default ARVideoPlayer;
-// import React, { useEffect } from "react";
+import React, { useEffect } from "react";
 
-// const ARVideoPlayer = () => {
-//   useEffect(() => {
-//     const video = document.querySelector("#video");
+const ARVideoPlayer = () => {
+  useEffect(() => {
+    const video = document.querySelector("#video");
 
-//     const playVideo = () => {
-//       if (video) {
-//         const playPromise = video.play();
-//         if (playPromise !== undefined) {
-//           playPromise.catch(() => {
-//             console.log("Video play prevented, waiting for user interaction...");
-//           });
-//         }
-//       }
-//       // Remove event listeners after play attempt
-//       window.removeEventListener("click", playVideo);
-//       window.removeEventListener("touchstart", playVideo);
-//     };
+    const playVideo = () => {
+      if (video) {
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            console.log("Video play prevented, waiting for user interaction...");
+          });
+        }
+      }
+      // Remove event listeners after play attempt
+      window.removeEventListener("click", playVideo);
+      window.removeEventListener("touchstart", playVideo);
+    };
 
-//     // Attempt play immediately
-//     playVideo();
+    // Attempt play immediately
+    playVideo();
 
-//     // Also add interaction listeners
-//     window.addEventListener("click", playVideo);
-//     window.addEventListener("touchstart", playVideo);
+    // Also add interaction listeners
+    window.addEventListener("click", playVideo);
+    window.addEventListener("touchstart", playVideo);
 
-//     return () => {
-//       window.removeEventListener("click", playVideo);
-//       window.removeEventListener("touchstart", playVideo);
-//     };
-//   }, []);
+    return () => {
+      window.removeEventListener("click", playVideo);
+      window.removeEventListener("touchstart", playVideo);
+    };
+  }, []);
 
-//   // 👇 Add this second useEffect for marker detection
-//   useEffect(() => {
-//     const marker = document.querySelector("a-marker");
-//     const video = document.querySelector("#video");
+  // 👇 Add this second useEffect for marker detection
+  useEffect(() => {
+    const marker = document.querySelector("a-marker");
+    const video = document.querySelector("#video");
 
-//     const onMarkerFound = () => {
-//       console.log("✅ Marker detected!");
-//       if (video) {
-//         video.play();
-//       }
-//     };
+    const onMarkerFound = () => {
+      console.log("✅ Marker detected!");
+      if (video) {
+        video.play();
+      }
+    };
 
-//     const onMarkerLost = () => {
-//       console.log("❌ Marker lost.");
-//       if (video) {
-//         video.pause();
-//       }
-//     };
+    const onMarkerLost = () => {
+      console.log("❌ Marker lost.");
+      if (video) {
+        video.pause();
+      }
+    };
 
-//     if (marker) {
-//       marker.addEventListener("markerFound", onMarkerFound);
-//       marker.addEventListener("markerLost", onMarkerLost);
-//     }
+    if (marker) {
+      marker.addEventListener("markerFound", onMarkerFound);
+      marker.addEventListener("markerLost", onMarkerLost);
+    }
 
-//     return () => {
-//       if (marker) {
-//         marker.removeEventListener("markerFound", onMarkerFound);
-//         marker.removeEventListener("markerLost", onMarkerLost);
-//       }
-//     };
-//   }, []);
+    return () => {
+      if (marker) {
+        marker.removeEventListener("markerFound", onMarkerFound);
+        marker.removeEventListener("markerLost", onMarkerLost);
+      }
+    };
+  }, []);
 
-//   return (
-//     <div style={{ height: "100vh" }}>
-//       <a-scene
-//         embedded
-//         arjs="sourceType: webcam;"
-//         vr-mode-ui="enabled: false"
-//         renderer="logarithmicDepthBuffer: true;"
-//       >
-//         <a-assets>
-//           <video
-//             id="video"
-//             src="https://res.cloudinary.com/dbnlmaim7/video/upload/v1747897612/5955965-uhd_3840_2160_30fps_hxa08u.mp4"
-//             preload="auto"
-//             crossOrigin="anonymous"
-//             loop
-//             muted
-//             playsInline
-//             webkit-playsinline="true"
-//           ></video>
-//         </a-assets>
+  return (
+    <div style={{ height: "100vh" }}>
+      <a-scene
+        embedded
+        arjs="sourceType: webcam;"
+        vr-mode-ui="enabled: false"
+        renderer="logarithmicDepthBuffer: true;"
+      >
+        <a-assets>
+          <video
+            id="video"
+            src="https://res.cloudinary.com/dbnlmaim7/video/upload/v1747897612/5955965-uhd_3840_2160_30fps_hxa08u.mp4"
+            preload="auto"
+            crossOrigin="anonymous"
+            loop
+            muted
+            playsInline
+            webkit-playsinline="true"
+          ></video>
+        </a-assets>
 
-//         <a-marker type="pattern" url="/pattern-marker.patt">
-//           <a-video
-//             src="#video"
-//             width="2"
-//             height="1"
-//             position="0 0 0"
-//             rotation="-90 0 0"
-//           ></a-video>
-//         </a-marker>
+        <a-marker type="pattern" url="/pattern-marker.patt">
+          <a-video
+            src="#video"
+            width="2"
+            height="1"
+            position="0 0 0"
+            rotation="-90 0 0"
+          ></a-video>
+        </a-marker>
 
-//         <a-entity camera></a-entity>
-//       </a-scene>
-//     </div>
-//   );
-// };
+        <a-entity camera></a-entity>
+      </a-scene>
+    </div>
+  );
+};
 
-// export default ARVideoPlayer;
+export default ARVideoPlayer;
 

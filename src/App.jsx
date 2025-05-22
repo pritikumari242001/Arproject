@@ -1,38 +1,20 @@
-// // src/App.jsx
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import ARVideoPlayer from "./components/ARVideoPlayer";
-// import QRCodeDisplay from "./components/QRCodeDisplay";
-
-// function App() {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<QRCodeDisplay/>} />
-//         <Route path="/ar" element={<ARVideoPlayer />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;
 import React from "react";
-import ARMarkerTest from "./components/ARMarkerTest";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ARVideoPlayer from "./components/ARVideoPlayer";
 import QRCodeDisplay from "./components/QRCodeDisplay";
 
-
 function App() {
-   return (
+  return (
     <Router>
       <Routes>
         <Route path="/" element={<QRCodeDisplay/>} />
-        <Route path="/ar" element={<ARMarkerTest />} />
+        <Route path="/ar" element={<ARVideoPlayer />} />
       </Routes>
     </Router>
   );
-
-
 }
 
 export default App;
+
+
 
