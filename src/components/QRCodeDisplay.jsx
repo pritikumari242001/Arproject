@@ -8,7 +8,7 @@ const QRCodeDisplay = () => {
 
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h2>Scan this QR code to view the AR Video</h2>
+      <h2>Scaner this QR code to view the AR Video</h2>
       <QRCodeSVG value={url} size={256} />
       <p>URL: {url}</p>
     </div>
