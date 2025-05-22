@@ -211,8 +211,8 @@ const ARVideoPlayer = () => {
             crossOrigin="anonymous"
             loop
             muted
-            playsInline
-            webkit-playsinline="true"
+            playsinline
+            webkit-playsinline
           ></video>
         </a-assets>
 
