@@ -7,11 +7,37 @@ const QRCodeDisplay = () => {
   const url = "https://arproject-eight.vercel.app/ar";
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h2>Scaner this QR code to view the AR Video</h2>
-      <QRCodeSVG value={url} size={256} />
-      <p>URL: {url}</p>
-    </div>
+    // <div style={{  height: "100vh",
+    //     width: "100vw",
+    //     display: "flex",
+    //     justifyContent: "center",
+    //     alignItems: "center", }}>
+    //   <QRCodeSVG value={url} size={256} />
+    //   <p style={{marginTop: "16px"}}>URL: {url}</p>
+    // </div>
+    <div
+  style={{
+    height: "100vh",
+    width: "100vw",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    }}
+  >
+    <QRCodeSVG value={url} size={256} />
+    <p style={{ marginTop: "16px", textAlign: "center" }}>
+      URL: {url}
+    </p>
+  </div>
+</div>
+
   );
 };
 
