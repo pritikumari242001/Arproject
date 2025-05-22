@@ -222,7 +222,7 @@ const ARVideoPlayer = () => {
             width="2"
             height="1"
             position="0 0 0"
-            rotation="-90 0 0"
+            rotation="0 0 0"
           ></a-video>
         </a-marker>
 
