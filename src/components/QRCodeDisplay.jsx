@@ -5,10 +5,9 @@ import { QRCodeSVG } from "qrcode.react";
 const QRCodeDisplay = () => {
 //   const url = "http://localhost:5173/ar";
    const url = "https://arproject-eight.vercel.app/ar";
+    // const url="https://ar-code.com/tyjh6LlgQ";
 
-
-
-  return (
+ return (
   
     <div
   style={{
