@@ -47,7 +47,7 @@ const ARViewer = () => {
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
         <h3>Scan the marker below with your phone camera</h3>
         <img
-          src="./flower.png"
+          src="/flower.png"  // note the leading slash here
           alt="Custom Marker"
           style={{ width: "300px" }}
         />
@@ -66,7 +66,7 @@ const ARViewer = () => {
 
       <a-scene embedded arjs="sourceType: webcam; facingMode: environment;">
         {/* Use custom marker pattern */}
-        <a-marker type="pattern" url="./hero.patt">
+        <a-marker type="pattern" url="/hero.patt">  {/* leading slash here too */}
           <a-video
             src="#myvid"
             width="2"
@@ -78,6 +78,7 @@ const ARViewer = () => {
             muted
           />
         </a-marker>
+
         <a-entity camera></a-entity>
       </a-scene>
     </>
@@ -85,4 +86,5 @@ const ARViewer = () => {
 };
 
 export default ARViewer;
+
 
