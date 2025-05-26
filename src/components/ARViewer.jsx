@@ -14,7 +14,7 @@ const ARViewer = () => {
         style={{ display: "none" }}
       ></video>
 
-      <a-scene embedded arjs>
+          <a-scene embedded arjs="sourceType: webcam; facingMode: environment;">
         {/* Marker */}
         <a-marker preset="hiro">
           {/* A-Frame video element using HTML video as texture */}
