@@ -43,17 +43,17 @@ import React from "react";
 const ARViewer = () => {
   return (
     <>
-      {/* Marker image so user can scan */}
+      {/* Show custom marker image for scanning */}
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
         <h3>Scan the marker below with your phone camera</h3>
         <img
-          src="https://raw.githubusercontent.com/AR-js-org/AR.js/master/three.js/data/images/HIRO.jpg"
-          alt="HIRO Marker"
+          src="./flower.png"
+          alt="Custom Marker"
           style={{ width: "300px" }}
         />
       </div>
 
-      {/* Hidden video texture */}
+      {/* Hidden video element */}
       <video
         id="myvid"
         src="https://res.cloudinary.com/dsouwco6y/video/upload/fl_attachment/103224-662114480_tiny_i37zoh.mp4"
@@ -65,7 +65,8 @@ const ARViewer = () => {
       ></video>
 
       <a-scene embedded arjs="sourceType: webcam; facingMode: environment;">
-        <a-marker preset="hiro">
+        {/* Use custom marker pattern */}
+        <a-marker type="pattern" url="./hero.patt">
           <a-video
             src="#myvid"
             width="2"
@@ -75,7 +76,7 @@ const ARViewer = () => {
             autoplay
             loop
             muted
-          ></a-video>
+          />
         </a-marker>
         <a-entity camera></a-entity>
       </a-scene>
@@ -84,3 +85,4 @@ const ARViewer = () => {
 };
 
 export default ARViewer;
+
